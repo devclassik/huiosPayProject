@@ -1,0 +1,340 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 0.2%;
+  position: fixed;
+  border-radius: 10px;
+  background: linear-gradient(0.15turn, #045A7D, #66C4AC);
+  z-index: 999;
+
+  .logo {
+    display: flex;
+    align-self: center;
+    margin-left: 10px;
+
+    img {}
+  }
+
+  .menu {
+    overflow: hidden;
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+
+      app-font-icon {
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 10px;
+
+      a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+
+        &:hover {
+          background-color: #ddd;
+          border-radius: 10px;
+        }
+      }
+    }
+
+  }
+
+  .menu a:hover,
+  .dropdown:hover .dropbtn {
+    // background-color: rgb(51, 51, 51);
+
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .menu-action {
+    display: flex;
+    flex-direction: row;
+
+    .action {
+      display: flex;
+      flex-direction: row;
+      padding-right: 20px;
+      
+      .button-row {
+        align-self: center;
+        justify-content: flex-start;
+        color: #fff;
+        margin-right: 20px;
+        button {
+          padding: 8px 25px;
+          border-radius: 20px;
+          border: none;
+          background-color: #E4F9FF;
+          color: #66C4AC;
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: 500;
+          text-transform: capitalize;
+        }
+
+      }
+
+      .icon {
+        justify-content: flex-end;
+        align-self: center;
+        position: relative;
+        top: 2px;
+        cursor: pointer;
+
+        app-font-icon {
+          position: relative;
+          top: 1px;
+          font-size: 25px;
+        }
+
+      }
+    }
+
+  }
+
+  .hamburger{
+    display: none;
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: linear-gradient(to left, #f46b45, #eea849);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu-a {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu-a li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu-a li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu-a > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #161515f5;
+  }
+  .menu-a > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+}
+
+/* Responsive Styles */
+// @media screen and (max-width: 767px) {
+//   .menu {
+//     display: none;
+//   }
+// }
+
+// @media screen and (max-width: 575px) {
+//   .menu {
+//     display: none;
+//   }
+// }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .nav-bar {
+  
+    .menu {
+      display: none;
+  
+    }
+  
+    .menu-action {
+      display: none;
+      flex-direction: row;
+    }
+    .hamburger{
+      display: block;
+      cursor: pointer;
+      .content{
+        opacity: 0.0;
+      }
+      &:active {
+        display: inline;
+        .content{
+          opacity: 1;
+          background-color: #66C4AC;
+
+        }
+      }
+    }
+  }
+  
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .nav-bar {
+  
+    .menu {
+      display: none;
+  
+    }
+  
+    .menu-action {
+      display: none;
+      flex-direction: row;
+    }
+    .hamburger{
+      display: block;
+      &:active{
+
+      }
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {}
