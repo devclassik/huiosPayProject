@@ -1,6 +1,8 @@
 <div class="container">
     <app-navbar></app-navbar>
-    <img src="../../../../assets/img/map.svg" alt="bg">
+    <div class="img">
+        <img src="../../../../assets/img/map.svg" alt="bg">
+    </div>
 
     <!-- map section-->
     <div class="overlay">
@@ -353,10 +355,25 @@
                     <li><a href="mailto:hello@gmail.com">hello@huiospay.com</a></li>
                     <li><a href="tel: +2348037086670"> 08037086670 </a></li>
                 </div>
-                <div class="social">
-                    <li>facebook</li>
-                    <li>twitter</li>
-                    <li>instagaram</li>
+                <div class="social"> 
+                    <li>
+                        <app-font-icon iconType="remix" iconName="facebook-circle-fill" iconSize="custom" 
+                        iconColor="#4267B2"
+                        >
+                        </app-font-icon>
+                    </li>
+                    <li>
+                        <app-font-icon iconType="remix" iconName="twitter-fill" iconSize="custom" 
+                        iconColor="#1DA1F2"
+                        >
+                        </app-font-icon>
+                    </li>
+                    <li>
+                        <app-font-icon iconType="remix" iconName="instagram-fill" iconSize="custom" 
+                        [iconColor]="insta"
+                        >
+                        </app-font-icon>
+                    </li>
                 </div>
             </div>
         </div>
