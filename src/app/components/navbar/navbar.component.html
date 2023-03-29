@@ -1,0 +1,103 @@
+<div class="nav-bar">
+    <div class="nav-bar-holder">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="logo">
+        </div>
+
+        <div class="menu">
+            <div class="dropdown">
+                <button class="dropbtn">Why Huiospay
+                </button>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Developer
+                    <app-font-icon iconType="remix" iconName="arrow-down-s-line" iconSize="custom" iconColor="#fff">
+                    </app-font-icon>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Overview</a>
+                    <a href="#">Integratoin</a>
+                    <a href="#">Documentation</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Company
+                    <app-font-icon iconType="remix" iconName="arrow-down-s-line" iconSize="custom" iconColor="#fff">
+                    </app-font-icon>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">About Us</a>
+                    <a href="#">Training & Development</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Customer Review</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Support
+                    <app-font-icon iconType="remix" iconName="arrow-down-s-line" iconSize="custom" iconColor="#fff">
+                    </app-font-icon>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Quick Help</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="menu-action">
+            <div class="action">
+                <div class="button-row">
+                    <button class="btn">Become a Merchant</button>
+                </div>
+                <div class="icon">
+                    <app-font-icon iconType="remix" iconName="user-fill" iconSize="custom" iconColor="#fff">
+                    </app-font-icon>
+                </div>
+            </div>
+        </div>
+
+        <section class="top-nav">
+            <input id="menu-toggle" (click)="switchCase(0)" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu-a">
+                <li>Why Huiospay</li>
+                <li (click)="switchCase(1)">Developer
+                    <app-font-icon iconType="remix" iconName="arrow-right-s-line" iconSize="custom" iconColor="#fff">
+                    </app-font-icon>
+                    <div class="mobile-dropdown-content" *ngIf="result === 'Case 1'">
+                        <a href="#">Overview</a>
+                        <a href="#">Integratoin</a>
+                        <a href="#">Documentation</a>
+                    </div>
+                </li>
+                <li (click)="switchCase(2)">Company
+                    <app-font-icon iconType="remix" iconName="arrow-right-s-line" iconSize="custom" iconColor="#fff">
+                    </app-font-icon>
+                    <div class="mobile-dropdown-content" *ngIf="result === 'Case 2'">
+                        <a href="#">About Us</a>
+                        <a href="#">Training & Development</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Customer Review</a>
+                    </div>
+                </li>
+                <li (click)="switchCase(3)">Support
+                    <app-font-icon iconType="remix" iconName="arrow-right-s-line" iconSize="custom" iconColor="#fff">
+                    </app-font-icon>
+                    <div class="mobile-dropdown-content" *ngIf="result === 'Case 3'">
+                        <a href="#">Contact Us</a>
+                        <a href="#">FAQs</a>
+                        <a href="#">Quick Help</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+</div>

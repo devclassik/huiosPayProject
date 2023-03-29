@@ -1,0 +1,82 @@
+    //footer section
+    .footer {
+        background: linear-gradient(0.12turn, #0096C4, #045A7D);
+        margin-top: 4.3%;
+        padding-top: 40px;
+
+        .f-card {
+            display: flex;
+            margin: auto;
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            background-color: #337395;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .logo {
+                display: flex;
+                justify-self: center;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            .huiospay {
+                h3 {
+                    font-size: 21px;
+                    color: #ffffffe5;
+                }
+
+                .list {
+                    li {
+                        list-style: none;
+                        font-size: 20px;
+                        color: #fff;
+                        padding-bottom: 6px;
+
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .social {
+                    display: flex;
+                    flex-direction: row;
+
+                    li {
+                        font-size: 20px;
+                        background-color: #fff;
+                        border-radius: 100%;
+                        list-style: none;
+                        padding: 4px 2px;
+                        cursor: pointer;
+
+                        .insta {
+                            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                        }
+
+                        app-font-icon {
+                            margin: auto;
+                            align-self: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footbase {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+    }
+    //end of footer section
