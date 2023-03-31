@@ -1,0 +1,20 @@
+{
+  "name": "huiospay",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Opemipo <alomajaopemipo8@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
+}

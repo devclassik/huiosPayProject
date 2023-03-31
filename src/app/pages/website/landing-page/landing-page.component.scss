@@ -1,381 +1,884 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import '../../../../styles.scss';
 
 * {
-    font-family: 'Signika Negative', sans-serif;
+  font-family: 'Signika Negative', sans-serif;
 }
 
 .container {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
+  background-color: #fff;
+  width: 100%;
+
+  button {
+    padding: 8px 25px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--become-agent-color);
+    color: var(--primary-blue);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+
+  //background 
+  .img {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .fade-in-left {
+    -webkit-animation: fade-in-left 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-left 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+
+  //end of background//
+
+  //map section
+  .overlay {
+    position: absolute;
+    top: 10%;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+
+    .overlay-left,
+    .overlay-right {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .overlay-left {
+      width: 60%;
+      flex-direction: column;
+      margin-top: 80px;
+      margin-left: 50px;
+
+      .bold-text {
+        h2 {
+          color: #fff;
+          font-size: 50px;
+          font-weight: 600;
+        }
+      }
+
+      .parag {
+        p {
+          font-size: 25px;
+          color: #fff;
+        }
+      }
+
+      .btn {
+        display: flex;
+
+        button {
+          padding: 8px 70px;
+          border-radius: 18px;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          font-size: 21px;
+          margin-right: 5%;
+
+        }
+
+        .btn-agent {
+          background: #FFFFFF;
+          color: var(--primary-blue);
+        }
+
+        .btn-agent-setup {
+          background-color: var(--setup-acct-color);
+        }
+      }
+    }
+
+    .overlay-right {
+      width: calc(100% - 50%);
+      flex-direction: column;
+
+      img {
+        margin-top: 20rem;
+        height: 100vh;
+        position: relative;
+        rotate: 0 1 1 -2deg;
+      }
+    }
+  }
+
+  .tracking-in-contract-bck-top {
+    -webkit-animation: tracking-in-contract-bck-top 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract-bck-top 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+
+  //end of map section
+
+  //seamless payment section
+  .seamless-section {
+    display: flex;
+    flex-direction: column;
+
+    .seamless-title {
+      padding: 10px;
+      margin: auto;
+
+      .btn-seamless {
+        font-size: 25px;
+        padding: 8px 70px;
+        text-transform: uppercase;
+      }
+
+    }
+
+    .seamless-heading {
+      margin: auto;
+      max-width: 50%;
+
+      h2 {
+        color: var(--primary-blue);
+        text-align: center;
+        font-size: 50px;
+      }
+    }
+
+    .seamless-payment {
+      display: flex;
+      flex-direction: row;
+      padding-left: 90px;
+      padding-right: 90px;
+
+      .left,
+      .middle,
+      .right {
+        display: flex;
+        flex-direction: row;
+
+        .icon {
+          padding-left: 10px;
+          align-self: center;
+
+          img {
+            height: 100;
+            width: auto;
+          }
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+
+          .text-title {
+            margin: 0;
+            padding: 0;
+
+            h3 {
+              color: var(--primary-blue);
+              font-size: 26px;
+            }
+          }
+
+          .text-msg {
+            h4 {
+              font-size: 25px;
+              font-weight: 100;
+              line-height: 1.5;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  //end of seamless payment section
+
+  // what we do section
+  .what-we-do {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    padding-left: 40px;
+    padding-right: 90px;
+
+    .wwd-left {
+      width: 60%;
+      cursor: pointer;
+
+    }
+
+    .wwd-right {
+      width: calc(100% - 50%);
+
+      .wwd-button {
+        .btn-wwd {
+          padding: 8px 70px;
+          font-size: 25px;
+          text-transform: uppercase;
+        }
+      }
+
+      .wwd-title {
+        width: 80%;
+
+        h2 {
+          color: var(--primary-blue);
+          font-size: 34px;
+        }
+      }
+
+      .wwd-text {
+        padding-right: 10px;
+
+        h3 {
+          font-size: 25px;
+          font-weight: 100;
+          color: var(--font-color);
+        }
+      }
+
+      .wwd-bulletin {
+        display: flex;
+        flex-direction: column;
+
+        .list {
+          display: flex;
+          flex-direction: row;
+
+
+          .list1 {
+            display: flex;
+            flex-direction: row;
+            margin-right: 5%;
+            min-width: 300px;
+
+            .icon {
+              display: flex;
+              align-self: center;
+              max-width: 30px;
+            }
+
+            .text {
+              margin-left: 10px;
+
+              p {
+                color: var(--font-color);
+                padding-left: 15px;
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  //end of what we do section
+
+  //why us section
+  .why-us {
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+    padding-right: 90px;
+    margin-top: 5%;
+
+    .wu-left {
+      width: 60%;
+      padding-left: 50px;
+
+      .wu-btn {
+        .btn-wwd {
+          padding: 8px 70px;
+          font-size: 25px;
+          text-transform: uppercase;
+        }
+      }
+
+      .wu-title {
+        width: 100%;
+
+        h3 {
+          color: var(--primary-blue);
+          font-size: 35px;
+        }
+      }
+
+      .wu-card {
+        border-radius: 10px;
+        background-color: #fff;
+        border: 1px solid var(--primary-blue);
+        box-shadow: var(--box-shadow);
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5%;
+        width: 70%;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+
+        .icon {
+          display: flex;
+          align-self: center;
+          padding: 10px;
+        }
+
+        .right {
+          padding: 10px;
+
+          .title {
+            h3 {
+              font-size: 25px;
+              color: var(--primary-blue);
+            }
+          }
+
+          .text {
+            h4 {
+              font-size: 22px;
+              line-height: 1.5;
+              font-weight: 200;
+            }
+          }
+        }
+
+        &:hover {
+          transform: translate(100px, 0px);
+          -webkit-transform: translate(100px, 0px);
+          -moz-transform: translate(100px, 0px);
+          -ms-transform: translate(100px, 0px);
+          -o-transform: translate(100px, 0px);
+          border: none;
+        }
+
+        &:active {
+          transform: translate(100px, 0px);
+          -webkit-transform: translate(100px, 0px);
+          -moz-transform: translate(100px, 0px);
+          -ms-transform: translate(100px, 0px);
+          -o-transform: translate(100px, 0px);
+          border: none;
+        }
+      }
+    }
+
+    .wu-right {
+      width: calc(100% - 60%);
+      align-self: center;
+
+      img {
+        width: 40vw;
+      }
+    }
+
+  }
+
+  //end of why us section
+
+  //huiospay safe train section
+  .huiospay-safe-tain {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    padding-left: 90px;
+    padding-right: 90px;
+
+    .hst-left {
+      padding: 40px;
+      width: 60%;
+
+    }
+
+    .hst-right {
+      width: calc(100% - 40%);
+      padding: 50px;
+
+      .hst-button {
+        .btn-hst {
+          padding: 8px 70px;
+          font-size: 25px;
+          text-transform: uppercase;
+        }
+
+        .btn-hst-two {
+          display: none
+        }
+      }
+
+      .hst-title {
+        width: 79%;
+
+        h2 {
+          font-size: 34px;
+          color: var(--primary-blue);
+        }
+      }
+
+      .hst-text {
+
+        h3 {
+          font-size: 22px;
+          line-height: 1.5;
+          font-weight: 100;
+          color: var(--font-color);
+          // text-align: justify;
+        }
+      }
+
+      .hst-bulleton {
+        display: flex;
+        flex-direction: column;
+
+        .list {
+          display: flex;
+          flex-direction: column;
+
+          .list1 {
+            display: flex;
+            flex-direction: row;
+            margin-right: 5%;
+
+            .icon {
+              display: flex;
+              align-self: center;
+              max-width: 30px;
+            }
+
+            .text {
+              margin-left: 10px;
+
+              p {
+                color: var(--font-color);
+                padding-left: 15px;
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+
+      .coming-soon {
+        display: flex;
+        flex-direction: row;
+
+        h4 {
+          font-size: 24px;
+          font-weight: 600;
+          padding-right: 5px;
+
+          a {
+            text-decoration: none;
+            color: var(--primary-blue);
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        img {
+          align-items: center;
+          height: 20px;
+          width: 15px;
+          left: 10px;
+          margin-top: 35px;
+        }
+
+      }
+
+    }
+  }
+
+  //end of huiospay train section
+
+}
+
+@-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes tracking-in-contract-bck-top {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(-300px);
+    transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-contract-bck-top {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(-300px);
+    transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .container {
 
     button {
-        padding: 8px 25px;
-        border-radius: 20px;
-        border: none;
-        background-color: #E4F9FF;
-        color: #045A7D;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
     }
 
 
     //background 
     .img {
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    }
+      background-image: url("../../../../assets/img/map.svg");
+      height: 80vh;
+      background-size: cover;
+      background-position: top;
 
-    .fade-in-left {
-        -webkit-animation: fade-in-left 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation: fade-in-left 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      img {
+        display: none;
+      }
     }
 
     //end of background//
 
     //map section
     .overlay {
-        position: absolute;
-        top: 10%;
-        padding: 10px 14px;
+      position: absolute;
+      top: 10%;
+      padding: 10px 10px;
+      display: flex;
+      flex-direction: row;
+      height: 53vh;
+      overflow: hidden;
+
+      .overlay-left,
+      .overlay-right {
         display: flex;
-        flex-direction: row;
-        height: 400px;
+        justify-content: space-around;
+      }
 
-        .overlay-left,
-        .overlay-right {
-            display: flex;
-            justify-content: space-around;
+      .overlay-left {
+        width: 90%;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 20px;
+
+        .bold-text {
+          h2 {
+            font-size: 35px;
+            font-weight: 600;
+          }
         }
 
-        .overlay-left {
-            width: 60%;
-            // padding-top: 20px;
-            flex-direction: column;
-            margin-top: 80px;
-            margin-left: 50px;
-
-            .bold-text {
-                h2 {
-                    color: #fff;
-                    font-size: 50px;
-                    font-weight: 600;
-                }
-            }
-
-            .parag {
-                p {
-                    font-size: 25px;
-                    color: #fff;
-                }
-            }
-
-            .btn {
-                display: flex;
-
-                button {
-                    padding: 8px 70px;
-                    border-radius: 18px;
-                    border: none;
-                    color: #fff;
-                    cursor: pointer;
-                    font-size: 21px;
-                    margin-right: 5%;
-
-                }
-
-                .btn-agent {
-                    background: #FFFFFF;
-                    color: #045A7D;
-                }
-
-                .btn-agent-setup {
-                    background-color: #103a71;
-                }
-            }
+        .parag {
+          p {
+            font-size: 20px;
+          }
         }
 
-        .overlay-right {
-            width: calc(100% - 50%);
-            flex-direction: column;
-            // height: 26rem;
-            // background-color: red;
+        .btn {
 
-            img {
-                margin-top: 20rem;
-                height: 100vh;
-                position: relative;
-                rotate: 0 1 1 -2deg;
-            }
+          button {
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 13px;
+            margin-right: 5%;
+
+          }
+
+          .btn-agent {}
+
+          .btn-agent-setup {}
         }
-    }
+      }
 
-    .tracking-in-contract-bck-top {
-        -webkit-animation: tracking-in-contract-bck-top 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        animation: tracking-in-contract-bck-top 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      .overlay-right {
+        display: none;
+      }
     }
 
     //end of map section
 
     //seamless payment section
-    .seamles-section {
+    .seamless-section {
+      margin-top: 10%;
+      display: flex;
+      flex-direction: column;
+
+      .seamless-title {
+        padding: 10px;
+        margin: auto;
+
+        .btn-seamless {
+          font-size: 20px;
+          padding: 8px 20px;
+          text-transform: uppercase;
+        }
+
+      }
+
+      .seamless-heading {
+        max-width: 90%;
+
+        h2 {
+          font-size: 25px;
+        }
+      }
+
+      .seamless-payment {
         display: flex;
         flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
 
-        .seamles-title {
-            padding: 10px;
-            margin: auto;
+        .left,
+        .middle,
+        .right {
+          display: flex;
+          flex-direction: column;
 
-            .btn-seamless {
-                font-size: 25px;
-                padding: 8px 70px;
-                text-transform: uppercase;
-            }
+          .icon {
+            padding-top: 20px;
+            padding-left: 10px;
 
-        }
+            img {}
+          }
 
-        .seamles-heading {
-            margin: auto;
-            max-width: 50%;
-
-            h2 {
-                color: #045A7D;
-                text-align: center;
-                font-size: 50px;
-            }
-        }
-
-        .seamless-payment {
+          .text {
             display: flex;
-            flex-direction: row;
-            padding-left: 90px;
-            padding-right: 90px;
+            flex-direction: column;
 
-            .left,
-            .middle,
-            .right {
-                display: flex;
-                flex-direction: row;
+            .text-title {
 
-                .icon {
-                    padding-left: 10px;
-                    align-self: center;
+              padding: 0;
 
-                    img {
-                        height: 100;
-                        width: auto;
-                    }
-                }
-
-                .text {
-                    display: flex;
-                    flex-direction: column;
-
-                    .text-title {
-                        margin: 0;
-                        padding: 0;
-
-                        h3 {
-                            color: #045A7D;
-                            font-size: 26px;
-                        }
-                    }
-
-                    .text-msg {
-                        h4 {
-                            font-size: 25px;
-                            font-weight: 100;
-                            line-height: 1.5;
-                        }
-                    }
-                }
-
+              h3 {
+                margin: 0;
+                font-size: 26px;
+              }
             }
+
+            .text-msg {
+              h4 {
+                margin: 0;
+                font-size: 23px;
+              }
+            }
+          }
+
         }
+      }
     }
 
     //end of seamless payment section
 
     // what we do section
     .what-we-do {
-        display: flex;
-        flex-direction: row;
-        margin-top: 5%;
-        padding-left: 40px;
-        padding-right: 90px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 10%;
+      padding-left: 30px;
+      padding-right: 30px;
 
-        .wwd-left {
-            width: 60%;
-            cursor: pointer;
+      .wwd-left {
+        display: none;
 
+      }
+
+      .wwd-right {
+        width: calc(100%);
+
+        .wwd-button {
+          .btn-wwd {
+            padding: 8px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
         }
 
-        .wwd-right {
-            width: calc(100% - 50%);
+        .wwd-title {
+          width: 100%;
 
-            .wwd-button {
-                .btn-wwd {
-                    padding: 8px 70px;
-                    font-size: 25px;
-                    text-transform: uppercase;
-                }
-            }
+          h2 {
+            font-size: 25px;
+          }
+        }
 
-            .wwd-title {
-                width: 80%;
+        .wwd-text {
+          padding-right: 10px;
 
-                h2 {
-                    color: #045A7D;
-                    font-size: 34px;
-                }
-            }
+          h3 {
+            text-align: start;
+            font-size: 23px;
+          }
+        }
 
-            .wwd-text {
-                padding-right: 10px;
+        .wwd-bulletin {
+          display: flex;
+          flex-direction: column;
 
-                h3 {
-                    font-size: 25px;
-                    font-weight: 100;
-                    text-align: justify;
-                    color: #333;
-                }
-            }
+          .list {
+            display: flex;
+            flex-direction: column;
 
-            .wwd-bulleton {
+            .list1 {
+              display: flex;
+              flex-direction: row;
+              margin-right: 2%;
+              min-width: 20px;
+
+              .icon {
                 display: flex;
-                flex-direction: column;
+                align-self: center;
+                max-width: 25px;
+              }
 
-                .list {
-                    display: flex;
-                    flex-direction: row;
+              .text {
+                margin-left: 10px;
 
-
-                    .list1 {
-                        display: flex;
-                        flex-direction: row;
-                        margin-right: 5%;
-                        min-width: 300px;
-
-                        .icon {
-                            display: flex;
-                            align-self: center;
-                            max-width: 30px;
-                        }
-
-                        .text {
-                            margin-left: 10px;
-
-                            p {
-                                color: #333;
-                                padding-left: 15px;
-                                font-size: 22px;
-                            }
-                        }
-                    }
+                p {
+                  color: var(--font-color);
+                  padding-left: 15px;
+                  font-size: 21px;
                 }
+              }
             }
-
+          }
         }
+
+      }
     }
 
     //end of what we do section
 
     //why us section
     .why-us {
-        display: flex;
-        flex-direction: row;
-        padding-left: 40px;
-        padding-right: 90px;
-        margin-top: 5%;
+      display: flex;
+      flex-direction: row;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-top: 10%;
 
-        .wu-left {
-            width: 60%;
-            padding-left: 50px;
+      .wu-left {
+        width: 100%;
+        padding-left: 0;
 
-            .wu-btn {
-                .btn-wwd {
-                    padding: 8px 70px;
-                    font-size: 25px;
-                    text-transform: uppercase;
-                }
-            }
-
-            .wu-title {
-                width: 100%;
-
-                h3 {
-                    color: #045A7D;
-                    font-size: 35px;
-                }
-            }
-
-            .wu-card {
-                border-radius: 10px;
-                background-color: #fff;
-                border: 1px solid #045A7D;
-                box-shadow: 0px 0px 10px 6px #EDEDED;
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 5%;
-                width: 70%;
-                transition: 0.5s ease-in-out;
-                cursor: pointer;
-
-                .icon {
-                    display: flex;
-                    align-self: center;
-                    padding: 10px;
-                }
-
-                .right {
-                    padding: 10px;
-
-                    .title {
-                        h3 {
-                            font-size: 25px;
-                            color: #045A7D;
-                        }
-                    }
-
-                    .text {
-                        h4 {
-                            font-size: 22px;
-                            line-height: 1.5;
-                            font-weight: 200;
-                        }
-                    }
-                }
-
-                &:hover {
-                    transform: translate(100px, 0px);
-                    -webkit-transform: translate(100px, 0px);
-                    -moz-transform: translate(100px, 0px);
-                    -ms-transform: translate(100px, 0px);
-                    -o-transform: translate(100px, 0px);
-                    border: none;
-                }
-
-                &:active {
-                    transform: translate(100px, 0px);
-                    -webkit-transform: translate(100px, 0px);
-                    -moz-transform: translate(100px, 0px);
-                    -ms-transform: translate(100px, 0px);
-                    -o-transform: translate(100px, 0px);
-                    border: none;
-                }
-            }
+        .wu-btn {
+          .btn-wwd {
+            padding: 8px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
         }
 
-        .wu-right {
-            width: calc(100% - 60%);
+        .wu-title {
+          width: 100%;
+
+          h3 {
+            font-size: 25px;
+          }
+        }
+
+        .wu-card {
+          border-radius: 10px;
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5%;
+          width: 80%;
+          transition: 0.8s ease-in-out;
+
+          .icon {
+            display: flex;
             align-self: center;
+            padding: 8px;
+          }
 
-            img {
-                width: 40vw;
+          .right {
+            padding: 8px;
+
+            .title {
+              h3 {
+                font-size: 22px;
+              }
             }
+
+            .text {
+              h4 {
+                font-size: 20px;
+              }
+            }
+          }
+
+          &:hover {
+            transform: translate(75px, 0px);
+            -webkit-transform: translate(75px, 0px);
+            -moz-transform: translate(75px, 0px);
+            -ms-transform: translate(75px, 0px);
+            -o-transform: translate(75px, 0px);
+            border: none;
+          }
+
+          &:active {
+            transform: translate(100px, 0px);
+            -webkit-transform: translate(100px, 0px);
+            -moz-transform: translate(100px, 0px);
+            -ms-transform: translate(100px, 0px);
+            -o-transform: translate(100px, 0px);
+            border: none;
+          }
         }
+      }
+
+      .wu-right {
+        display: none;
+      }
 
     }
 
@@ -383,1810 +886,1156 @@
 
     //huiospay safe train section
     .huiospay-safe-tain {
-        display: flex;
-        flex-direction: row;
-        margin-top: 5%;
-        padding-left: 90px;
-        padding-right: 90px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 10%;
+      padding-left: 30px;
+      padding-right: 30px;
 
-        .hst-left {
-            padding: 40px;
-            width: 60%;
+      .hst-left {
+        display: none;
+
+      }
+
+      .hst-right {
+        width: 100%;
+        padding: 0px;
+
+        .hst-button {
+          .btn-hst {
+            display: none;
+          }
+
+          .btn-hst-two {
+            display: block;
+            padding: 8px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
+        }
+
+        .hst-title {
+          width: 100%;
+
+          h2 {
+            font-size: 26px;
+          }
+        }
+
+        .hst-text {
+          h3 {
+            font-size: 22px;
+            line-height: 1.5;
+            font-weight: 100;
+          }
+        }
+
+        .hst-bulleton {
+          display: flex;
+          flex-direction: column;
+
+          .list {
+            display: flex;
+            flex-direction: column;
+
+            .list1 {
+              display: flex;
+              flex-direction: row;
+              margin-right: 5%;
+
+              .icon {
+                display: flex;
+                align-self: center;
+                max-width: 30px;
+              }
+
+              .text {
+                margin-left: 10px;
+
+                p {
+                  color: var(--font-color);
+                  padding-left: 15px;
+                  font-size: 22px;
+                }
+              }
+            }
+          }
+        }
+
+        .coming-soon {
+          display: flex;
+          flex-direction: row;
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+            padding-right: 0;
+
+            a {
+              text-decoration: none;
+              color: var(--primary-blue);
+
+              &:hover,
+              &:active {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          img {
+            height: 15px;
+            width: 10px;
+            margin-left: 5px;
+            margin-top: 34px;
+          }
 
         }
 
-        .hst-right {
-            width: calc(100% - 40%);
-            padding: 50px;
-
-            .hst-button {
-                .btn-hst {
-                    padding: 8px 70px;
-                    font-size: 25px;
-                    text-transform: uppercase;
-                }
-            }
-
-            .hst-title {
-                width: 79%;
-
-                h2 {
-                    font-size: 34px;
-                    color: #045A7D;
-                }
-            }
-
-            .hst-text {
-
-                h3 {
-                    font-size: 22px;
-                    line-height: 1.5;
-                    font-weight: 100;
-                    color: #333;
-                    // text-align: justify;
-                }
-            }
-
-            .hst-bulleton {
-                display: flex;
-                flex-direction: column;
-
-                .list {
-                    display: flex;
-                    flex-direction: column;
-
-                    .list1 {
-                        display: flex;
-                        flex-direction: row;
-                        margin-right: 5%;
-
-                        .icon {
-                            display: flex;
-                            align-self: center;
-                            max-width: 30px;
-                        }
-
-                        .text {
-                            margin-left: 10px;
-
-                            p {
-                                color: #333;
-                                padding-left: 15px;
-                                font-size: 22px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .coming-soon {
-                display: flex;
-                flex-direction: row;
-
-                h4 {
-                    font-size: 24px;
-                    font-weight: 600;
-                    padding-right: 5px;
-
-                    a {
-                        text-decoration: none;
-                        color: #045A7D;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-                }
-
-                img {
-                    align-items: center;
-                    height: 20px;
-                    width: 15px;
-                    left: 10px;
-                    margin-top: 35px;
-                }
-
-            }
-
-        }
+      }
     }
 
     //end of huiospay train section
 
-    //community section
-    .community-section {
-        img {
-            width: 100%;
-            height: 60vh;
-        }
-
-        .c-holder {
-            display: flex;
-            flex-direction: row;
-            padding: 50px;
-            position: absolute;
-            margin-top: -360px;
-
-            .left {
-                width: 60%;
-
-                h3 {
-                    width: 80%;
-                    color: #045A7D;
-                    font-weight: 600;
-                    font-size: 34px;
-                }
-
-                .c-button {
-                    .btn-hst {
-                        background-color: #0096C4;
-                        color: #fff;
-                        padding: 8px 50px;
-                        font-size: 22px;
-                    }
-                }
-
-            }
-
-            .right {
-                width: calc(100% - 60%);
-
-                img {
-                    position: relative;
-                    left: 12rem;
-                    height: 23.7rem;
-                }
-            }
-        }
-    }
-
-    //end of community section
-
-    //footer section
-    .footer {
-        background: linear-gradient(0.12turn, #0096C4, #045A7D);
-        margin-top: 3.86%;
-        padding-top: 40px;
-
-        .f-card {
-            display: flex;
-            margin: auto;
-            border-radius: 20px;
-            padding: 40px;
-            width: 90%;
-            background-color: #337395;
-            flex-direction: row;
-            justify-content: space-around;
-
-            .logo {
-                display: flex;
-                justify-self: center;
-
-                a {
-                    text-decoration: none;
-                }
-            }
-
-            .huiospay {
-                h3 {
-                    font-size: 21px;
-                    color: #ffffffe5;
-                }
-
-                .list {
-                    li {
-                        list-style: none;
-                        font-size: 20px;
-                        color: #fff;
-                        padding-bottom: 6px;
-
-                        a {
-                            text-decoration: none;
-                            color: #fff;
-                        }
-                    }
-                }
-
-                .social {
-                    display: flex;
-                    flex-direction: row;
-
-                    li {
-                        font-size: 20px;
-                        background-color: #fff;
-                        border-radius: 100%;
-                        list-style: none;
-                        padding: 4px 2px;
-                        cursor: pointer;
-
-                        .insta {
-                            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-                        }
-
-                        app-font-icon {
-                            margin: auto;
-                            align-self: center;
-                        }
-                    }
-                }
-            }
-        }
-
-        .footbase {
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            color: white;
-            text-align: center;
-            font-size: 20px;
-            padding-top: 10px;
-            padding-bottom: 5px;
-        }
-    }
-
-    //end of footer section
-
-}
-
-@-webkit-keyframes fade-in-left {
-    0% {
-        -webkit-transform: translateX(-50px);
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fade-in-left {
-    0% {
-        -webkit-transform: translateX(-50px);
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes tracking-in-contract-bck-top {
-    0% {
-        letter-spacing: 1em;
-        -webkit-transform: translateZ(400px) translateY(-300px);
-        transform: translateZ(400px) translateY(-300px);
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0.6;
-    }
-
-    100% {
-        -webkit-transform: translateZ(0) translateY(0);
-        transform: translateZ(0) translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes tracking-in-contract-bck-top {
-    0% {
-        letter-spacing: 1em;
-        -webkit-transform: translateZ(400px) translateY(-300px);
-        transform: translateZ(400px) translateY(-300px);
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0.6;
-    }
-
-    100% {
-        -webkit-transform: translateZ(0) translateY(0);
-        transform: translateZ(0) translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 480px) {
-    .container {
-
-        button {
-            padding: 8px 20px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-
-        //background 
-        .img {
-            background-image: url("../../../../assets/img/map.svg");
-            height: 80vh;
-            background-size: cover;
-            background-position: top;
-
-            img {
-                display: none;
-            }
-        }
-        //end of background//
-
-        //map section
-        .overlay {
-            position: absolute;
-            top: 10%;
-            padding: 10px 10px;
-            display: flex;
-            flex-direction: row;
-            height: 53vh;
-
-            .overlay-left,
-            .overlay-right {
-                display: flex;
-                justify-content: space-around;
-            }
-
-            .overlay-left {
-                width: 90%;
-                flex-direction: column;
-                margin-top: 20px;
-                margin-left: 20px;
-
-                .bold-text {
-                    h2 {
-                        font-size: 35px;
-                        font-weight: 600;
-                    }
-                }
-
-                .parag {
-                    p {
-                        font-size: 20px;
-                    }
-                }
-
-                .btn {
-
-                    button {
-                        padding: 8px 12px;
-                        border-radius: 10px;
-                        font-size: 13px;
-                        margin-right: 5%;
-
-                    }
-
-                    .btn-agent {
-                        background: #FFFFFF;
-                        color: #045A7D;
-                    }
-
-                    .btn-agent-setup {
-                        background-color: #103a71;
-                    }
-                }
-            }
-
-            .overlay-right {
-               display: none;
-            }
-        }
-
-        .tracking-in-contract-bck-top {
-            -webkit-animation: tracking-in-contract-bck-top 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-            animation: tracking-in-contract-bck-top 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        }
-
-        //end of map section
-
-        //seamless payment section
-        .seamles-section {
-            display: none;
-            flex-direction: column;
-
-            .seamles-title {
-                padding: 10px;
-                margin: auto;
-
-                .btn-seamless {
-                    font-size: 25px;
-                    padding: 8px 70px;
-                    text-transform: uppercase;
-                }
-
-            }
-
-            .seamles-heading {
-                margin: auto;
-                max-width: 50%;
-
-                h2 {
-                    color: #045A7D;
-                    text-align: center;
-                    font-size: 50px;
-                }
-            }
-
-            .seamless-payment {
-                display: flex;
-                flex-direction: row;
-                padding-left: 90px;
-                padding-right: 90px;
-
-                .left,
-                .middle,
-                .right {
-                    display: flex;
-                    flex-direction: row;
-
-                    .icon {
-                        padding-left: 10px;
-                        align-self: center;
-
-                        img {
-                            height: 100;
-                            width: auto;
-                        }
-                    }
-
-                    .text {
-                        display: flex;
-                        flex-direction: column;
-
-                        .text-title {
-                            margin: 0;
-                            padding: 0;
-
-                            h3 {
-                                color: #045A7D;
-                                font-size: 26px;
-                            }
-                        }
-
-                        .text-msg {
-                            h4 {
-                                font-size: 25px;
-                                font-weight: 100;
-                                line-height: 1.5;
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-
-        //end of seamless payment section
-
-        // what we do section
-        .what-we-do {
-            display: none;
-            flex-direction: row;
-            margin-top: 5%;
-            padding-left: 40px;
-            padding-right: 90px;
-
-            .wwd-left {
-                width: 60%;
-                cursor: pointer;
-
-            }
-
-            .wwd-right {
-                width: calc(100% - 50%);
-
-                .wwd-button {
-                    .btn-wwd {
-                        padding: 8px 70px;
-                        font-size: 25px;
-                        text-transform: uppercase;
-                    }
-                }
-
-                .wwd-title {
-                    width: 80%;
-
-                    h2 {
-                        color: #045A7D;
-                        font-size: 34px;
-                    }
-                }
-
-                .wwd-text {
-                    padding-right: 10px;
-
-                    h3 {
-                        font-size: 25px;
-                        font-weight: 100;
-                        text-align: justify;
-                        color: #333;
-                    }
-                }
-
-                .wwd-bulleton {
-                    display: flex;
-                    flex-direction: column;
-
-                    .list {
-                        display: flex;
-                        flex-direction: row;
-
-
-                        .list1 {
-                            display: flex;
-                            flex-direction: row;
-                            margin-right: 5%;
-                            min-width: 300px;
-
-                            .icon {
-                                display: flex;
-                                align-self: center;
-                                max-width: 30px;
-                            }
-
-                            .text {
-                                margin-left: 10px;
-
-                                p {
-                                    color: #333;
-                                    padding-left: 15px;
-                                    font-size: 22px;
-                                }
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
-
-        //end of what we do section
-
-        //why us section
-        .why-us {
-            display: none;
-            flex-direction: row;
-            padding-left: 40px;
-            padding-right: 90px;
-            margin-top: 5%;
-
-            .wu-left {
-                width: 60%;
-                padding-left: 50px;
-
-                .wu-btn {
-                    .btn-wwd {
-                        padding: 8px 70px;
-                        font-size: 25px;
-                        text-transform: uppercase;
-                    }
-                }
-
-                .wu-title {
-                    width: 100%;
-
-                    h3 {
-                        color: #045A7D;
-                        font-size: 35px;
-                    }
-                }
-
-                .wu-card {
-                    border-radius: 10px;
-                    background-color: #fff;
-                    border: 1px solid #045A7D;
-                    box-shadow: 0px 0px 10px 6px #EDEDED;
-                    display: flex;
-                    flex-direction: row;
-                    margin-bottom: 5%;
-                    width: 70%;
-                    transition: 0.5s ease-in-out;
-                    cursor: pointer;
-
-                    .icon {
-                        display: flex;
-                        align-self: center;
-                        padding: 10px;
-                    }
-
-                    .right {
-                        padding: 10px;
-
-                        .title {
-                            h3 {
-                                font-size: 25px;
-                                color: #045A7D;
-                            }
-                        }
-
-                        .text {
-                            h4 {
-                                font-size: 22px;
-                                line-height: 1.5;
-                                font-weight: 200;
-                            }
-                        }
-                    }
-
-                    &:hover {
-                        transform: translate(100px, 0px);
-                        -webkit-transform: translate(100px, 0px);
-                        -moz-transform: translate(100px, 0px);
-                        -ms-transform: translate(100px, 0px);
-                        -o-transform: translate(100px, 0px);
-                        border: none;
-                    }
-
-                    &:active {
-                        transform: translate(100px, 0px);
-                        -webkit-transform: translate(100px, 0px);
-                        -moz-transform: translate(100px, 0px);
-                        -ms-transform: translate(100px, 0px);
-                        -o-transform: translate(100px, 0px);
-                        border: none;
-                    }
-                }
-            }
-
-            .wu-right {
-                width: calc(100% - 60%);
-                align-self: center;
-
-                img {
-                    width: 40vw;
-                }
-            }
-
-        }
-
-        //end of why us section
-
-        //huiospay safe train section
-        .huiospay-safe-tain {
-            display: none;
-            flex-direction: row;
-            margin-top: 5%;
-            padding-left: 90px;
-            padding-right: 90px;
-
-            .hst-left {
-                padding: 40px;
-                width: 60%;
-
-            }
-
-            .hst-right {
-                width: calc(100% - 40%);
-                padding: 50px;
-
-                .hst-button {
-                    .btn-hst {
-                        padding: 8px 70px;
-                        font-size: 25px;
-                        text-transform: uppercase;
-                    }
-                }
-
-                .hst-title {
-                    width: 79%;
-
-                    h2 {
-                        font-size: 34px;
-                        color: #045A7D;
-                    }
-                }
-
-                .hst-text {
-
-                    h3 {
-                        font-size: 22px;
-                        line-height: 1.5;
-                        font-weight: 100;
-                        color: #333;
-                        // text-align: justify;
-                    }
-                }
-
-                .hst-bulleton {
-                    display: flex;
-                    flex-direction: column;
-
-                    .list {
-                        display: flex;
-                        flex-direction: column;
-
-                        .list1 {
-                            display: flex;
-                            flex-direction: row;
-                            margin-right: 5%;
-
-                            .icon {
-                                display: flex;
-                                align-self: center;
-                                max-width: 30px;
-                            }
-
-                            .text {
-                                margin-left: 10px;
-
-                                p {
-                                    color: #333;
-                                    padding-left: 15px;
-                                    font-size: 22px;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .coming-soon {
-                    display: flex;
-                    flex-direction: row;
-
-                    h4 {
-                        font-size: 24px;
-                        font-weight: 600;
-                        padding-right: 5px;
-
-                        a {
-                            text-decoration: none;
-                            color: #045A7D;
-
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-
-                    img {
-                        align-items: center;
-                        height: 20px;
-                        width: 15px;
-                        left: 10px;
-                        margin-top: 35px;
-                    }
-
-                }
-
-            }
-        }
-
-        //end of huiospay train section
-
-        //community section
-        .community-section {
-            display: none;
-            img {
-                width: 100%;
-                height: 60vh;
-            }
-
-            .c-holder {
-                display: flex;
-                flex-direction: row;
-                padding: 50px;
-                position: absolute;
-                margin-top: -360px;
-
-                .left {
-                    width: 60%;
-
-                    h3 {
-                        width: 80%;
-                        color: #045A7D;
-                        font-weight: 600;
-                        font-size: 34px;
-                    }
-
-                    .c-button {
-                        .btn-hst {
-                            background-color: #0096C4;
-                            color: #fff;
-                            padding: 8px 50px;
-                            font-size: 22px;
-                        }
-                    }
-
-                }
-
-                .right {
-                    width: calc(100% - 60%);
-
-                    img {
-                        position: relative;
-                        left: 12rem;
-                        height: 23.7rem;
-                    }
-                }
-            }
-        }
-
-        //end of community section
-
-        //footer section
-        .footer {
-            display: none;
-            background: linear-gradient(0.12turn, #0096C4, #045A7D);
-            margin-top: 3.86%;
-            padding-top: 40px;
-
-            .f-card {
-                display: flex;
-                margin: auto;
-                border-radius: 20px;
-                padding: 40px;
-                width: 90%;
-                background-color: #337395;
-                flex-direction: row;
-                justify-content: space-around;
-
-                .logo {
-                    display: flex;
-                    justify-self: center;
-
-                    a {
-                        text-decoration: none;
-                    }
-                }
-
-                .huiospay {
-                    h3 {
-                        font-size: 21px;
-                        color: #ffffffe5;
-                    }
-
-                    .list {
-                        li {
-                            list-style: none;
-                            font-size: 20px;
-                            color: #fff;
-                            padding-bottom: 6px;
-
-                            a {
-                                text-decoration: none;
-                                color: #fff;
-                            }
-                        }
-                    }
-
-                    .social {
-                        display: flex;
-                        flex-direction: row;
-
-                        li {
-                            font-size: 20px;
-                            background-color: #fff;
-                            border-radius: 100%;
-                            list-style: none;
-                            padding: 4px 2px;
-                            cursor: pointer;
-
-                            .insta {
-                                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-                            }
-
-                            app-font-icon {
-                                margin: auto;
-                                align-self: center;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .footbase {
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                color: white;
-                text-align: center;
-                font-size: 20px;
-                padding-top: 10px;
-                padding-bottom: 5px;
-            }
-        }
-
-        //end of footer section
-
-    }
+  }
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-    .container {
+@media (min-width: 481px) and (max-width: 800px) {
+  .container {
 
-        background-color: rgb(255, 255, 255);
-        width: 100%;
+    button {
+      padding: 8px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
 
-        // position: relative;
-        img {
-            width: 100%;
-            height: 80vh;
+
+    //background 
+    .img {
+      background-image: url("../../../../assets/img/map.svg");
+      height: 80vh;
+      background-size: cover;
+      background-position: top;
+
+      img {
+        display: none;
+      }
+    }
+
+    //end of background//
+
+    //map section
+    .overlay {
+      position: absolute;
+      top: 10%;
+      padding: 10px 10px;
+      display: flex;
+      flex-direction: row;
+      height: 53vh;
+      overflow: hidden;
+
+      .overlay-left,
+      .overlay-right {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .overlay-left {
+        width: 90%;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 20px;
+
+        .bold-text {
+          h2 {
+            font-size: 40px;
+            font-weight: 600;
+          }
         }
 
-        button {
-            padding: 8px 25px;
-            border-radius: 20px;
-            border: none;
-            background-color: #E4F9FF;
-            color: #045A7D;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
+        .parag {
+          p {
+            font-size: 25px;
+          }
         }
+
+        .btn {
+
+          button {
+            padding: 8px 22px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-right: 5%;
+
+          }
+
+          .btn-agent {}
+
+          .btn-agent-setup {}
+        }
+      }
+
+      .overlay-right {
+        display: none;
+      }
+    }
+
+    //end of map section
+
+    //seamless payment section
+    .seamless-section {
+      margin-top: 10%;
+      display: flex;
+      flex-direction: column;
+
+      .seamless-title {
+        padding: 10px;
+        margin: auto;
+
+        .btn-seamless {
+          font-size: 20px;
+          padding: 8px 20px;
+          text-transform: uppercase;
+        }
+
+      }
+
+      .seamless-heading {
+        max-width: 90%;
 
         h2 {
-            color: #045A7D;
+          font-size: 25px;
         }
+      }
 
-        .overlay {
-            position: absolute;
-            top: 20%;
-            padding: 10px 14px;
+      .seamless-payment {
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .left,
+        .middle,
+        .right {
+          display: flex;
+          flex-direction: column;
+
+          .icon {
+            padding-top: 20px;
+            padding-left: 10px;
+
+            img {}
+          }
+
+          .text {
             display: flex;
-            flex-direction: row;
-            height: 200px;
+            flex-direction: column;
 
-            .overlay-left,
-            .overlay-right {
-                display: flex;
-                justify-content: space-around;
+            .text-title {
+
+              padding: 0;
+
+              h3 {
+                margin: 0;
+                font-size: 26px;
+              }
             }
 
-            .overlay-left {
-                padding-top: 20px;
-                flex-direction: column;
-                margin-top: 150px;
-                margin-left: 50px;
-
-                .bold-text {
-                    h2 {
-                        color: #fff;
-                        font-size: 40px;
-                        font-weight: 600;
-                        font-family: 'Work Sans';
-                    }
-                }
-
-                .parag {
-                    p {
-                        font-size: 20px;
-                        color: #fff;
-                    }
-                }
-
-                .btn {
-                    display: flex;
-
-                    button {
-                        padding: 8px 25px;
-                        border-radius: 20px;
-                        border: none;
-                        color: #fff;
-                        cursor: pointer;
-                        font-size: 20px;
-                        margin-right: 5%;
-
-                    }
-
-                    .btn-agent {
-                        background: #66C4AC;
-                    }
-
-                    .btn-agent-setup {
-                        background-color: #106971;
-                    }
-                }
+            .text-msg {
+              h4 {
+                margin: 0;
+                font-size: 23px;
+              }
             }
+          }
 
-            .overlay-right {
-                flex-direction: column;
+        }
+      }
+    }
 
-                img {
-                    position: relative;
-                    top: 35%;
-                    align-self: baseline;
-                    padding-top: 50px;
-                }
-            }
+    //end of seamless payment section
+
+    // what we do section
+    .what-we-do {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10%;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .wwd-left {
+        display: none;
+
+      }
+
+      .wwd-right {
+        width: calc(100%);
+
+        .wwd-button {
+          .btn-wwd {
+            padding: 8px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
         }
 
+        .wwd-title {
+          width: 100%;
 
-        .seamles-section {
-
-            .seamles-title {}
-
-            .seamles-heading {
-                max-width: 80%;
-
-                h2 {
-                    font-size: 25px;
-                }
-            }
-
-            .seamless-payment {
-                display: flex;
-                flex-direction: row;
-
-                .left,
-                .middle,
-                .right {
-                    display: flex;
-                    flex-direction: row;
-
-                    .icon {
-                        padding-left: 10px;
-                        align-self: center;
-
-                        img {
-                            height: 50;
-                            width: auto;
-                        }
-                    }
-
-                    .text {
-                        display: flex;
-                        flex-direction: column;
-
-                        .text-title {
-                            h3 {}
-                        }
-
-                        .text-msg {
-                            h4 {
-                                font-weight: 100;
-                            }
-                        }
-                    }
-
-                }
-            }
+          h2 {
+            font-size: 25px;
+          }
         }
 
-        .what-we-do {
+        .wwd-text {
+          padding-right: 10px;
+
+          h3 {
+            font-size: 23px;
+            text-align: start;
+          }
+        }
+
+        .wwd-bulletin {
+          display: flex;
+          flex-direction: column;
+
+          .list {
             display: flex;
-            flex-direction: row;
-            margin-top: 2%;
+            flex-direction: column;
 
-            .wwd-left {
-                width: 50%;
+            .list1 {
+              display: flex;
+              flex-direction: row;
+              margin-right: 2%;
+              min-width: 20px;
 
-            }
-
-            .wwd-right {
-                width: calc(100% - 50%);
-                padding: 20px;
-
-                .wwd-button {
-                    button {
-                        text-transform: uppercase;
-                    }
-
-                    btn-wwd {}
-                }
-
-                .wwd-title {
-                    width: 79%;
-
-                    h2 {
-                        font-size: 34px;
-                    }
-                }
-
-                .wwd-text {
-
-                    h3 {
-                        font-size: 18px;
-                        font-weight: 100;
-                        text-align: justify;
-                    }
-                }
-
-                .wwd-bulleton {
-                    display: flex;
-                    flex-direction: column;
-
-                    .list {
-                        display: flex;
-                        flex-direction: row;
-
-                        .list1 {
-                            display: flex;
-                            flex-direction: row;
-                            margin-right: 5%;
-
-                            .icon {
-                                max-width: 30px;
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
-
-        .why-us {
-
-            .wu-left {
-                width: 60%;
-                padding-left: 20px;
-
-                .wu-title {
-                    width: 95%;
-
-                    h3 {
-                        font-size: 25px;
-                    }
-                }
-
-                .wu-card {
-                    width: 80%;
-
-                    .right {
-
-
-
-                        .text {
-                            h4 {
-                                font-weight: 200;
-                            }
-                        }
-                    }
-
-                    &:hover {
-                        -webkit-transform: translate(60px, 0px);
-                        -moz-transform: translate(60px, 0px);
-                        -ms-transform: translate(60px, 0px);
-                        -o-transform: translate(60px, 0px);
-                    }
-                }
-            }
-
-            .wu-right {
-                width: calc(100% - 60%);
-            }
-
-        }
-
-        .huospay-safe-tain {
-
-            .hst-left {
-                padding: 50px;
-                width: 30%;
+              .icon {
                 display: flex;
                 align-self: center;
+                max-width: 25px;
+              }
 
+              .text {
+                margin-left: 10px;
+
+                p {
+                  color: var(--font-color);
+                  padding-left: 15px;
+                  font-size: 21px;
+                }
+              }
             }
-
-            .hst-right {
-                width: calc(100% - 30%);
-                padding: 50px;
-
-                .hst-button {
-                    button {
-                        text-transform: uppercase;
-                    }
-
-                    btn-hst {}
-                }
-
-                .hst-title {
-                    width: 80%;
-
-                    h2 {
-                        font-size: 30px;
-                    }
-                }
-
-                .hst-text {
-
-                    h3 {
-                        font-size: 18px;
-                        font-weight: 100;
-                        text-align: justify;
-                    }
-                }
-
-                .hst-bulleton {
-                    display: flex;
-                    flex-direction: column;
-
-                    .list {
-                        display: flex;
-                        flex-direction: column;
-
-                        .list1 {
-                            display: flex;
-                            justify-self: center;
-                            flex-direction: row;
-                            margin-right: 5%;
-
-                            .icon {
-                                display: flex;
-                                align-items: center;
-                                max-width: 30px;
-                            }
-
-                            .text {
-                                margin-left: 10px;
-
-                                p {}
-                            }
-                        }
-                    }
-                }
-
-                .coming-soon {
-                    display: flex;
-                    flex-direction: row;
-
-                    h4 {
-                        font-size: 24px;
-                        font-weight: 600;
-                        padding-right: 5px;
-
-                        a {
-                            text-decoration: none;
-                            color: #045A7D;
-
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-
-                    img {
-                        align-items: center;
-                        height: 20px;
-                        width: 15px;
-                        left: 10px;
-                        margin-top: 35px;
-                    }
-
-                }
-
-            }
+          }
         }
 
-        .community-section {
-
-            .c-holder {
-                display: flex;
-                flex-direction: row;
-                padding: 50px;
-                position: absolute;
-                margin-top: -280px;
-
-                .left {
-                    width: 60%;
-
-                    h3 {
-                        width: 70%;
-                        color: #045A7D;
-                        font-weight: 600;
-                        font-size: 34px;
-                    }
-
-                    .c-button {
-                        button {
-                            background-color: #5CB99C;
-                            // background-color: #5accb0;
-                            color: #fff;
-                        }
-                    }
-
-                }
-
-                .right {
-                    // background-color: #E4F9FF;
-                    width: calc(100% - 60%);
-
-                }
-            }
-        }
-
-        .footer {
-            margin-top: 0%;
-            padding-top: 20px;
-
-            .f-card {
-                display: flex;
-                margin: auto;
-                border-radius: 10px;
-                padding: 40px;
-                width: 70%;
-                flex-direction: row;
-                justify-content: space-around;
-
-                .logo {
-                    display: flex;
-                    justify-self: center;
-
-                    a {
-                        padding: 10px;
-                        text-decoration: none;
-                    }
-                }
-
-                .huiospay {
-                    h3 {
-                        color: #fff;
-                    }
-
-                    .list {
-                        li {
-                            list-style: none;
-                            font-size: 15px;
-                            color: #fff;
-                            padding-bottom: 6px;
-
-                            a {
-                                text-decoration: none;
-                                color: #fff;
-                            }
-                        }
-                    }
-
-                    .social {
-                        display: flex;
-                        flex-direction: row;
-
-                        li {
-                            color: #fff;
-                            list-style: none;
-                            padding: 5px;
-                        }
-                    }
-                }
-            }
-
-            .footbase {
-                font-size: 12px;
-                padding-top: 5px;
-                padding: 5px;
-            }
-        }
+      }
     }
+
+    //end of what we do section
+
+    //why us section
+    .why-us {
+      display: flex;
+      flex-direction: row;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-top: 10%;
+
+      .wu-left {
+        width: 100%;
+        padding-left: 0;
+
+        .wu-btn {
+          .btn-wwd {
+            padding: 8px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
+        }
+
+        .wu-title {
+          width: 100%;
+
+          h3 {
+            font-size: 25px;
+          }
+        }
+
+        .wu-card {
+          border-radius: 10px;
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5%;
+          width: 80%;
+          transition: 0.8s ease-in-out;
+
+          .icon {
+            display: flex;
+            align-self: center;
+            padding: 8px;
+          }
+
+          .right {
+            padding: 8px;
+
+            .title {
+              h3 {
+                font-size: 22px;
+              }
+            }
+
+            .text {
+              h4 {
+                font-size: 20px;
+              }
+            }
+          }
+
+          &:hover {
+            transform: translate(75px, 0px);
+            -webkit-transform: translate(75px, 0px);
+            -moz-transform: translate(75px, 0px);
+            -ms-transform: translate(75px, 0px);
+            -o-transform: translate(75px, 0px);
+            border: none;
+          }
+
+          &:active {
+            transform: translate(100px, 0px);
+            -webkit-transform: translate(100px, 0px);
+            -moz-transform: translate(100px, 0px);
+            -ms-transform: translate(100px, 0px);
+            -o-transform: translate(100px, 0px);
+            border: none;
+          }
+        }
+      }
+
+      .wu-right {
+        display: none;
+      }
+
+    }
+
+    //end of why us section
+
+    //huiospay safe train section
+    .huiospay-safe-tain {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10%;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .hst-left {
+        display: none;
+
+      }
+
+      .hst-right {
+        width: 100%;
+        padding: 0px;
+
+        .hst-button {
+          .btn-hst {
+            display: none;
+          }
+
+          .btn-hst-two {
+            display: block;
+            padding: 8px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
+        }
+
+        .hst-title {
+          width: 100%;
+
+          h2 {
+            font-size: 26px;
+          }
+        }
+
+        .hst-text {
+          h3 {
+            font-size: 22px;
+            line-height: 1.5;
+            font-weight: 100;
+          }
+        }
+
+        .hst-bulleton {
+          display: flex;
+          flex-direction: column;
+
+          .list {
+            display: flex;
+            flex-direction: column;
+
+            .list1 {
+              display: flex;
+              flex-direction: row;
+              margin-right: 5%;
+
+              .icon {
+                display: flex;
+                align-self: center;
+                max-width: 30px;
+              }
+
+              .text {
+                margin-left: 10px;
+
+                p {
+                  color: var(--font-color);
+                  padding-left: 15px;
+                  font-size: 22px;
+                }
+              }
+            }
+          }
+        }
+
+        .coming-soon {
+          display: flex;
+          flex-direction: row;
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+            padding-right: 0;
+
+            a {
+              text-decoration: none;
+              color: var(--primary-blue);
+
+              &:hover,
+              &:active {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          img {
+            height: 15px;
+            width: 10px;
+            margin-left: 5px;
+            margin-top: 34px;
+          }
+
+        }
+
+      }
+    }
+
+    //end of huiospay train section
+
+
+
+  }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .container {
+@media (min-width: 801px) and (max-width: 1024px) {
+  .container {
 
-        button {
-            padding: 8px 25px;
-            font-size: 14px;
-            font-weight: 500;
+    button {
+      padding: 8px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+
+    //background 
+    .img {
+      background-image: url("../../../../assets/img/map.svg");
+      height: 80vh;
+      background-size: cover;
+      background-position: top;
+
+      img {
+        display: none;
+      }
+    }
+
+    //end of background//
+
+    //map section
+    .overlay {
+      position: absolute;
+      top: 10%;
+      padding: 10px 10px;
+      display: flex;
+      flex-direction: row;
+      height: 53vh;
+      overflow: hidden;
+
+      .overlay-left,
+      .overlay-right {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .overlay-left {
+        width: 90%;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 20px;
+
+        .bold-text {
+          h2 {
+            font-size: 50px;
+            font-weight: 600;
+          }
         }
 
-        h2 {}
+        .parag {
+          p {
+            font-size: 30px;
+          }
+        }
 
-        .overlay {
-            top: 2.5%;
-            padding: 8px 12px;
+        .btn {
+
+          button {
+            padding: 8px 30px;
+            border-radius: 10px;
+            font-size: 27px;
+            margin-right: 5%;
+
+          }
+
+          .btn-agent {}
+
+          .btn-agent-setup {}
+        }
+      }
+
+      .overlay-right {
+        display: none;
+      }
+    }
+
+    //end of map section
+
+    //seamless payment section
+    .seamless-section {
+      margin-top: 10%;
+      display: flex;
+      flex-direction: column;
+
+      .seamless-title {
+        padding: 10px;
+        margin: auto;
+
+        .btn-seamless {
+          font-size: 20px;
+          padding: 8px 20px;
+          text-transform: uppercase;
+        }
+
+      }
+
+      .seamless-heading {
+        max-width: 90%;
+
+        h2 {
+          font-size: 25px;
+        }
+      }
+
+      .seamless-payment {
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .left,
+        .middle,
+        .right {
+          display: flex;
+          flex-direction: column;
+
+          .icon {
+            padding-top: 20px;
+            padding-left: 10px;
+
+            img {}
+          }
+
+          .text {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
 
-            .overlay-left,
-            .overlay-right {
-                display: flex;
-                justify-content: space-around;
+            .text-title {
+
+              padding: 0;
+
+              h3 {
+                margin: 0;
+                font-size: 26px;
+              }
             }
 
-            .overlay-left {
-                width: 60%;
-                margin-top: 120px;
-                margin-left: 40px;
-
-                .bold-text {
-                    width: 100%;
-
-                    h2 {
-                        font-size: 34px;
-                        font-weight: 600;
-                    }
-                }
-
-                .parag {
-                    p {
-                        font-size: 20px;
-                    }
-                }
-
-                .btn {
-                    display: flex;
-
-                    button {
-                        padding: 8px 20px;
-                        border-radius: 15px;
-                        font-size: 18px;
-
-                    }
-
-                    .btn-agent {}
-
-                    .btn-agent-setup {}
-                }
+            .text-msg {
+              h4 {
+                margin: 0;
+                font-size: 23px;
+              }
             }
+          }
 
-            .overlay-right {
-                flex-direction: column;
-                width: calc(100% - 60%);
+        }
+      }
+    }
 
-                img {
-                    position: relative;
-                    top: 52%;
-                    left: -10%;
-                    width: 50vw;
-                    height: fit-content;
-                }
-            }
+    //end of seamless payment section
+
+    // what we do section
+    .what-we-do {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10%;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .wwd-left {
+        display: none;
+
+      }
+
+      .wwd-right {
+        width: calc(100%);
+
+        .wwd-button {
+          .btn-wwd {
+            padding: 8px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
         }
 
+        .wwd-title {
+          width: 100%;
 
-        .seamles-section {
-
-            .seamles-title {}
-
-            .seamles-heading {
-                max-width: 90%;
-
-                h2 {
-                    font-size: 25px;
-                }
-            }
-
-            .seamless-payment {
-                display: flex;
-                flex-direction: row;
-                width: 95%;
-
-                .left,
-                .middle,
-                .right {
-                    display: flex;
-                    flex-direction: row;
-
-                    .icon {
-                        padding-left: 10px;
-                        align-self: center;
-
-                        img {
-                            height: 50;
-                            width: auto;
-                        }
-                    }
-
-                    .text {
-                        display: flex;
-                        flex-direction: column;
-
-                        .text-title {
-                            h3 {}
-                        }
-
-                        .text-msg {
-                            h4 {
-                                font-weight: 100;
-                            }
-                        }
-                    }
-
-                }
-            }
+          h2 {
+            font-size: 25px;
+          }
         }
 
-        .what-we-do {
+        .wwd-text {
+          padding-right: 10px;
+
+          h3 {
+            font-size: 23px;
+            text-align: start;
+          }
+        }
+
+        .wwd-bulletin {
+          display: flex;
+          flex-direction: column;
+
+          .list {
             display: flex;
-            flex-direction: row;
-            margin-top: 2%;
+            flex-direction: column;
 
-            .wwd-left {
-                width: 50%;
+            .list1 {
+              display: flex;
+              flex-direction: row;
+              margin-right: 2%;
+              min-width: 20px;
 
-            }
-
-            .wwd-right {
-                width: calc(100% - 50%);
-                padding: 20px;
-
-                .wwd-button {
-                    button {
-                        text-transform: uppercase;
-                    }
-
-                    btn-wwd {}
-                }
-
-                .wwd-title {
-                    width: 79%;
-
-                    h2 {
-                        font-size: 34px;
-                    }
-                }
-
-                .wwd-text {
-
-                    h3 {
-                        font-size: 18px;
-                        font-weight: 100;
-                        text-align: justify;
-                    }
-                }
-
-                .wwd-bulleton {
-                    display: flex;
-                    flex-direction: column;
-
-                    .list {
-                        display: flex;
-                        flex-direction: row;
-
-                        .list1 {
-                            display: flex;
-                            flex-direction: row;
-                            margin-right: 5%;
-
-                            .icon {
-                                display: flex;
-                                align-self: center;
-                                max-width: 32px;
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
-
-        .why-us {
-
-            .wu-left {
-                width: 60%;
-                padding-left: 20px;
-
-
-                .wu-title {
-                    width: 95%;
-
-                    h3 {
-                        font-size: 28px;
-                    }
-                }
-
-                .wu-card {
-                    width: 80%;
-
-                    .right {
-
-                        .text {
-                            h4 {
-                                font-weight: 200;
-                            }
-                        }
-                    }
-
-                    &:hover {
-                        // transform: translate(100px, 0px);
-                    }
-                }
-            }
-
-            .wu-right {
-                width: calc(100% - 60%);
-            }
-
-        }
-
-        .huospay-safe-tain {
-
-            .hst-left {
-                padding: 50px;
-                width: 30%;
+              .icon {
                 display: flex;
                 align-self: center;
+                max-width: 25px;
+              }
 
+              .text {
+                margin-left: 10px;
+
+                p {
+                  color: var(--font-color);
+                  padding-left: 15px;
+                  font-size: 21px;
+                }
+              }
             }
-
-            .hst-right {
-                width: calc(100% - 30%);
-                padding: 50px;
-
-                .hst-button {
-                    button {
-                        text-transform: uppercase;
-                    }
-
-                    btn-hst {}
-                }
-
-                .hst-title {
-                    width: 80%;
-
-                    h2 {
-                        font-size: 30px;
-                    }
-                }
-
-                .hst-text {
-
-                    h3 {
-                        font-size: 18px;
-                        font-weight: 100;
-                    }
-                }
-
-                .hst-bulleton {
-                    display: flex;
-                    flex-direction: column;
-
-                    .list {
-                        display: flex;
-                        flex-direction: column;
-
-                        .list1 {
-                            display: flex;
-                            justify-self: center;
-                            flex-direction: row;
-                            margin-right: 5%;
-
-                            .icon {
-                                display: flex;
-                                align-items: center;
-                                max-width: 30px;
-                            }
-
-                            .text {
-                                margin-left: 10px;
-
-                                p {}
-                            }
-                        }
-                    }
-                }
-
-                .coming-soon {
-                    display: flex;
-                    flex-direction: row;
-
-                    h4 {
-                        font-size: 24px;
-                        font-weight: 600;
-                        padding-right: 5px;
-
-                        a {
-                            text-decoration: none;
-                            color: #045A7D;
-
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-
-                    img {
-                        align-items: center;
-                        height: 20px;
-                        width: 15px;
-                        left: 10px;
-                        margin-top: 35px;
-                    }
-
-                }
-
-            }
+          }
         }
 
-        .community-section {
-
-            img {
-                height: 35vh;
-            }
-
-            .c-holder {
-                margin-top: -300px;
-
-                .left {
-                    width: 70%;
-
-                    h3 {
-                        font-weight: 600;
-                        font-size: 30px;
-                        padding-top: 2.5rem;
-                    }
-
-                    .c-button {
-                        button {}
-                    }
-
-                }
-
-                .right {
-                    // background-color: #E4F9FF;
-                    width: calc(100% - 60%);
-
-                    img {
-                        height: 15.8rem;
-                    }
-
-                }
-            }
-        }
-
-        .footer {
-            margin-top: 0%;
-            padding-top: 40px;
-
-            .f-card {
-                display: flex;
-                margin: auto;
-                border-radius: 10px;
-                padding: 40px;
-                width: 80%;
-                flex-direction: row;
-                justify-content: space-around;
-
-                .logo {
-                    display: flex;
-                    justify-self: center;
-
-                    a {
-                        padding: 20px;
-                        text-decoration: none;
-                    }
-                }
-
-                .huiospay {
-                    h3 {
-                        color: #fff;
-                    }
-
-                    .list {
-                        li {
-                            list-style: none;
-                            font-size: 15px;
-                            color: #fff;
-                            padding-bottom: 6px;
-
-                            a {
-                                text-decoration: none;
-                                color: #fff;
-                            }
-                        }
-                    }
-
-                    .social {
-                        display: flex;
-                        flex-direction: row;
-
-                        li {
-                            color: #fff;
-                            list-style: none;
-                            padding: 5px;
-                        }
-                    }
-                }
-            }
-
-            .footbase {
-                font-size: 12px;
-                padding-top: 5px;
-                padding: 5px;
-            }
-        }
+      }
     }
+
+    //end of what we do section
+
+    //why us section
+    .why-us {
+      display: flex;
+      flex-direction: row;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-top: 10%;
+
+      .wu-left {
+        width: 100%;
+        padding-left: 0;
+
+        .wu-btn {
+          .btn-wwd {
+            padding: 8px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
+        }
+
+        .wu-title {
+          width: 100%;
+
+          h3 {
+            font-size: 25px;
+          }
+        }
+
+        .wu-card {
+          border-radius: 10px;
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5%;
+          width: 80%;
+          transition: 0.8s ease-in-out;
+
+          .icon {
+            display: flex;
+            align-self: center;
+            padding: 8px;
+          }
+
+          .right {
+            padding: 8px;
+
+            .title {
+              h3 {
+                font-size: 22px;
+              }
+            }
+
+            .text {
+              h4 {
+                font-size: 20px;
+              }
+            }
+          }
+
+          &:hover {
+            transform: translate(75px, 0px);
+            -webkit-transform: translate(75px, 0px);
+            -moz-transform: translate(75px, 0px);
+            -ms-transform: translate(75px, 0px);
+            -o-transform: translate(75px, 0px);
+            border: none;
+          }
+
+          &:active {
+            transform: translate(100px, 0px);
+            -webkit-transform: translate(100px, 0px);
+            -moz-transform: translate(100px, 0px);
+            -ms-transform: translate(100px, 0px);
+            -o-transform: translate(100px, 0px);
+            border: none;
+          }
+        }
+      }
+
+      .wu-right {
+        display: none;
+      }
+
+    }
+
+    //end of why us section
+
+    //huiospay safe train section
+    .huiospay-safe-tain {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10%;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .hst-left {
+        display: none;
+
+      }
+
+      .hst-right {
+        width: 100%;
+        padding: 0px;
+
+        .hst-button {
+          .btn-hst {
+            display: none;
+          }
+
+          .btn-hst-two {
+            display: block;
+            padding: 8px 30px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
+        }
+
+        .hst-title {
+          width: 100%;
+
+          h2 {
+            font-size: 26px;
+          }
+        }
+
+        .hst-text {
+          h3 {
+            font-size: 22px;
+            line-height: 1.5;
+            font-weight: 100;
+          }
+        }
+
+        .hst-bulleton {
+          display: flex;
+          flex-direction: column;
+
+          .list {
+            display: flex;
+            flex-direction: column;
+
+            .list1 {
+              display: flex;
+              flex-direction: row;
+              margin-right: 5%;
+
+              .icon {
+                display: flex;
+                align-self: center;
+                max-width: 30px;
+              }
+
+              .text {
+                margin-left: 10px;
+
+                p {
+                  color: var(--font-color);
+                  padding-left: 15px;
+                  font-size: 22px;
+                }
+              }
+            }
+          }
+        }
+
+        .coming-soon {
+          display: flex;
+          flex-direction: row;
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+            padding-right: 0;
+
+            a {
+              text-decoration: none;
+              color: var(--primary-blue);
+
+              &:hover,
+              &:active {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          img {
+            height: 15px;
+            width: 10px;
+            margin-left: 5px;
+            margin-top: 34px;
+          }
+
+        }
+
+      }
+    }
+
+    //end of huiospay train section
+  }
 }
 
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {}
+@media (min-width: 1025px) and (max-width: 1279px) {}
 
 /* Media Query for Large screens */
-@media (min-width: 1281px) {}
+@media (min-width: 1280px) {
+  .container {
+
+    //map section
+    .overlay {
+
+      .overlay-left {
+
+        .bold-text {
+          h2 {
+            font-size: 45px;
+            font-weight: 600;
+          }
+        }
+
+        .btn {
+          button {
+            padding: 8px 20px;
+            border-radius: 18px;
+            font-size: 22px;
+
+          }
+
+        }
+      }
+
+      .overlay-right {
+        img {
+          margin-top: 4.5rem;
+        }
+      }
+    }
+
+    //end of map section
+
+    // what we do section
+    .what-we-do {
+      padding-left: 10px;
+      padding-right: 40px;
+
+      .wwd-left {
+        width: 50%;
+        cursor: pointer;
+
+        img {
+          width: 90%;
+        }
+
+      }
+
+      .wwd-right {
+        width: calc(100% - 50%);
+        padding: 20px;
+      }
+    }
+
+    //end of what we do section
+
+    //huiospay safe train section
+    .huiospay-safe-tain {
+      padding-left: 40px;
+      padding-right: 40px;
+
+      .hst-left {
+        padding: 40px;
+        width: 50%;
+        img{
+          width: 90%;
+        }
+
+      }
+
+      .hst-right {
+        width: calc(100% - 50%);
+        padding: 50px;
+      }
+    }
+
+    //end of huiospay safe train section
+
+  }
+
+}
+
+/* Media Query for macbook Pro  15 */
+@media (min-width: 1440px) {
+  .container {
+
+    //map section
+    .overlay {
+
+      .overlay-left {
+
+        .bold-text {
+          h2 {
+            font-size: 50px;
+            font-weight: 600;
+          }
+        }
+
+        .btn {
+          button {
+            padding: 8px 40px;
+            border-radius: 18px;
+            font-size: 22px;
+
+          }
+
+        }
+      }
+
+      .overlay-right {
+        img {
+          margin-top: 13.2rem;
+        }
+      }
+    }
+
+    //end of map section
+
+  }
+
+}
+
+/* Media Query for office hp  15 */
+@media (min-width: 1600px) {
+  .container {
+    //map section
+    .overlay {
+
+      .overlay-left {
+
+        .bold-text {
+          h2 {
+            font-size: 50px;
+            font-weight: 600;
+          }
+        }
+
+        .btn {
+          button {
+            padding: 8px 40px;
+            border-radius: 18px;
+            font-size: 22px;
+
+          }
+
+        }
+      }
+
+      .overlay-right {
+        img {
+          margin-top: 20.5rem;
+        }
+      }
+    }
+
+    //end of map section
+  }
+
+}

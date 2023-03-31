@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import '../../../styles.scss';
+
+* {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+button {
+    padding: 8px 25px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--secondary-background);
+    color: var(--primary-blue);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+//community section
+.community-section {
+    img {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .c-holder {
+        display: flex;
+        flex-direction: row;
+        padding: 50px;
+        position: absolute;
+        margin-top: -360px;
+
+        .left {
+            width: 60%;
+
+            h3 {
+                width: 80%;
+                color: var(--primary-blue);;
+                font-weight: 600;
+                font-size: 34px;
+            }
+
+            .c-button {
+                .btn-hst {
+                    background-color: var(--background-blue);
+                    color: #fff;
+                    padding: 8px 50px;
+                    font-size: 22px;
+                }
+
+                .btn-hst-two {
+                    display: none;
+                }
+            }
+
+        }
+
+        .right {
+            width: calc(100% - 60%);
+
+            img {
+                position: relative;
+                left: 12rem;
+                height: 23.7rem;
+            }
+        }
+    }
+}
+
+//end of community section
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+
+    button {
+        padding: 8px 20px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    //community section
+    .community-section {
+        display: flex;
+
+        img {
+            width: 100%;
+            height: 50vh;
+        }
+
+        .c-holder {
+            display: flex;
+            flex-direction: row;
+            padding: 30px;
+            position: absolute;
+            margin-top: 8rem;
+
+            .left {
+                width: 100%;
+
+                h3 {
+                    width: 100%;
+                    font-size: 30px;
+                }
+
+                .c-button {
+                    .btn-hst {
+                        display: none;
+                    }
+
+                    .btn-hst-two {
+                        display: block;
+                        background-color: var(--background-blue);
+                        color: #fff;
+                        padding: 8px 30px;
+                        font-size: 22px;
+                    }
+                }
+
+            }
+
+            .right {
+                display: none;
+            }
+        }
+    }
+
+    //end of community section
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 800px) {
+    button {
+        padding: 8px 20px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    //community section
+    .community-section {
+        display: flex;
+
+        img {
+            width: 100%;
+            height: 50vh;
+        }
+
+        .c-holder {
+            display: flex;
+            flex-direction: row;
+            padding: 30px;
+            position: absolute;
+            margin-top: -10px;
+
+            .left {
+                width: 100%;
+
+                h3 {
+                    width: 100%;
+                    font-size: 30px;
+                }
+
+                .c-button {
+                    .btn-hst {
+                        display: none;
+                    }
+
+                    .btn-hst-two {
+                        display: block;
+                        background-color: var(--background-blue);
+                        color: #fff;
+                        padding: 8px 30px;
+                        font-size: 22px;
+                    }
+                }
+
+            }
+
+            .right {
+                display: none;
+            }
+        }
+    }
+
+    //end of community section
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 801px) and (max-width: 1024px) {
+
+    button {
+        padding: 8px 20px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    //community section
+    .community-section {
+        display: flex;
+
+        img {
+            width: 100%;
+            height: 50vh;
+        }
+
+        .c-holder {
+            display: flex;
+            flex-direction: row;
+            padding: 30px;
+            position: absolute;
+            margin-top: 4rem;
+
+            .left {
+                width: 100%;
+
+                h3 {
+                    width: 100%;
+                    font-size: 35px;
+                }
+
+                .c-button {
+                    .btn-hst {
+                        display: none;
+                    }
+
+                    .btn-hst-two {
+                        display: block;
+                        background-color: var(--background-blue);
+                        color: #fff;
+                        padding: 8px 40px;
+                        font-size: 30px;
+                    }
+                }
+
+            }
+
+            .right {
+                display: none;
+            }
+        }
+    }
+    //end of community section
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1280px) {
+
+    //community section
+    .community-section {
+        img {}
+
+        .c-holder {
+
+            .left {
+                width: 60%;
+
+                h3 {}
+
+                .c-button {
+                    .btn-hst {}
+
+                    .btn-hst-two {
+                        display: none;
+                    }
+                }
+
+            }
+
+            .right {
+                width: calc(100% - 60%);
+
+                img {
+                    left: 1rem;
+                }
+            }
+        }
+    }
+    //end of community section
+}
+
+
+/* Media Query for macbook Pro  15 */
+@media (min-width: 1440px) {
+
+    //community section
+    .community-section {
+        img {}
+
+        .c-holder {
+
+            .left {
+                width: 60%;
+
+                h3 {}
+
+                .c-button {
+                    .btn-hst {}
+
+                    .btn-hst-two {
+                        display: none;
+                    }
+                }
+
+            }
+
+            .right {
+                width: calc(100% - 60%);
+
+                img {
+                    left: 1rem;
+                }
+            }
+        }
+    }
+    //end of community section
+}
+
+/* Media Query for office hp  15 */
+@media (min-width: 1600px) {
+
+    //community section
+    .community-section {
+        img {}
+
+        .c-holder {
+
+            .left {
+                width: 60%;
+
+                h3 {}
+
+                .c-button {
+                    .btn-hst {}
+
+                    .btn-hst-two {
+                        display: none;
+                    }
+                }
+
+            }
+
+            .right {
+                width: calc(100% - 60%);
+
+                img {
+                    left: 17rem;
+                }
+            }
+        }
+    }
+    //end of community section
+}

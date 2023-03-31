@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+* {
+    font-family: 'Signika Negative', sans-serif;
+  }
+  
+:root{
+    --navbar-bg-main: linear-gradient(0.15turn, #154374, #2E75B3);
+    --navbar-bg-sec: linear-gradient(0.48turn, #ffffff17, #80808078);
+    --primary-blue: #045A7D;
+    --background-blue: #0096C4;
+    --secondary-background: #E4F9FF;
+    --footer-icon-blue: #334B69;
+    --footer-f-card-color: #337395;
+    --setup-acct-color: #103a71;
+    --become-agent-color: #E4F9FF;
+    --font-color: #252525;
+    --box-shadow: 0px 0px 10px 6px #EDEDED;
+}

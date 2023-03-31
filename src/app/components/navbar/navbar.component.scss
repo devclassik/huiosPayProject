@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import '../../../styles.scss';
+
 
 * {
   font-family: 'Signika Negative', sans-serif;
@@ -7,15 +9,17 @@
 .nav-bar {
   width: 100%;
   position: fixed;
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
   height: 6rem;
-  background: linear-gradient(0.15turn, #154374, #2E75B3);
+  background: var(--navbar-bg-main);
   z-index: 999;
 
   .nav-bar-holder {
     display: flex;
     justify-content: space-around;
-    background: linear-gradient(0.48turn, #ffffff17, #80808078);
+    background: var(--navbar-bg-sec);
     margin: 15px auto;
     height: 4rem;
     width: 90%;
@@ -37,6 +41,12 @@
       .dropdown {
         float: left;
         overflow: hidden;
+        a{
+          color: white;
+          cursor: pointer;
+          text-decoration: none;
+        }
+       
       }
 
       .dropbtn {
@@ -47,6 +57,7 @@
         padding: 14px 16px;
         background-color: inherit;
         margin: 0;
+        
 
         app-font-icon {
           position: relative;
@@ -111,7 +122,7 @@
             border-radius: 20px;
             border: none;
             background-color: #fcfcfc;
-            color: #045A7D;
+            color: var(--primary-blue);
             cursor: pointer;
             font-size: 20px;
             font-weight: 500;

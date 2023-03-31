@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import '../../../../styles.scss';
+
+
+* {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    width: 100%;
+
+    // what we do section
+    .why-huiospay {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+        padding-left: 90px;
+        padding-right: 90px;
+
+        .why-left {
+            width: 50%;
+
+            .why-title {
+                width: 80%;
+
+                h2 {
+                    color: var(--primary-blue);
+                    font-size: 50px;
+                }
+            }
+
+            .why-text {
+                padding-right: 10px;
+
+                h3 {
+                    font-size: 25px;
+                    font-weight: 100;
+                    color: var(--font-color);
+                }
+            }
+
+            .why-bulletin {
+                display: flex;
+                flex-direction: column;
+
+                .list {
+                    display: flex;
+                    flex-direction: column;
+
+
+                    .list1 {
+                        display: flex;
+                        flex-direction: row;
+                        margin-right: 5%;
+                        min-width: 300px;
+
+                        .icon {
+                            display: flex;
+                            align-self: center;
+                            max-width: 30px;
+                        }
+
+                        .text {
+                            margin-left: 10px;
+
+                            p {
+                                color: var(--font-color);
+                                padding-left: 15px;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .why-right {
+            width: calc(100% - 50%);
+
+        }
+    }
+
+    //end of what we do section
+
+    // our solution
+    .our-solution {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+        padding-left: 40px;
+        padding-right: 90px;
+
+        .our-left {
+            padding: 40px;
+            width: 50%;
+
+        }
+
+        .our-right {
+            width: calc(100% - 50%);
+            padding: 50px;
+
+            .our-title {
+                width: 85%;
+
+                h2 {
+                    font-size: 50px;
+                    color: var(--primary-blue);
+                }
+            }
+
+            .our-text {
+
+                h3 {
+                    font-size: 30px;
+                    line-height: 1.5;
+                    font-weight: 100;
+                    color: var(--font-color);
+                }
+            }
+        }
+    }
+    //end of our solution
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .container {
+
+        // what we do section
+        .why-huiospay {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .why-left {
+                width: 100%;
+
+                .why-title {
+                    width: 90%;
+
+                    h2 {
+                        color: var(--primary-blue);
+                        font-size: 42px;
+                    }
+                }
+
+                .why-text {
+                    padding-right: 10px;
+
+                    h3 {
+                        font-size: 23px;
+                        font-weight: 100;
+                        color: var(--font-color);
+                    }
+                }
+
+                .why-bulletin {
+                    display: flex;
+                    flex-direction: column;
+
+                    .list {
+                        display: flex;
+                        flex-direction: column;
+
+                        .list1 {
+                            display: flex;
+                            flex-direction: row;
+                            margin-right: 5%;
+                            min-width: 300px;
+
+                            .icon {
+                                display: flex;
+                                align-self: center;
+                                max-width: 30px;
+                            }
+
+                            .text {
+                                margin-left: 10px;
+
+                                p {
+                                    color: var(--font-color);
+                                    padding-left: 15px;
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .why-right {
+                display: none;
+                // width: calc(100% - 50%);
+
+            }
+        }
+
+        //end of what we do section
+
+        // our solution
+        .our-solution {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .our-left {
+                display: none;
+
+            }
+
+            .our-right {
+                width: 100%;
+                padding: 0;
+
+                .our-title {
+                    width: 100%;
+
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+
+                .our-text {
+
+                    h3 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+        //end of our solution
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 800px) {
+    .container {
+
+        // what we do section
+        .why-huiospay {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .why-left {
+                width: 100%;
+
+                .why-title {
+                    width: 90%;
+
+                    h2 {
+                        color: var(--primary-blue);
+                        font-size: 42px;
+                    }
+                }
+
+                .why-text {
+                    padding-right: 10px;
+
+                    h3 {
+                        font-size: 23px;
+                        font-weight: 100;
+                        color: var(--font-color);
+                    }
+                }
+
+                .why-bulletin {
+                    display: flex;
+                    flex-direction: column;
+
+                    .list {
+                        display: flex;
+                        flex-direction: column;
+
+                        .list1 {
+                            display: flex;
+                            flex-direction: row;
+                            margin-right: 5%;
+                            min-width: 300px;
+
+                            .icon {
+                                display: flex;
+                                align-self: center;
+                                max-width: 30px;
+                            }
+
+                            .text {
+                                margin-left: 10px;
+
+                                p {
+                                    color: var(--font-color);
+                                    padding-left: 15px;
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .why-right {
+                display: none;
+                // width: calc(100% - 50%);
+
+            }
+        }
+
+        //end of what we do section
+
+        // our solution
+        .our-solution {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .our-left {
+                display: none;
+
+            }
+
+            .our-right {
+                width: 100%;
+                padding: 0;
+
+                .our-title {
+                    width: 100%;
+
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+
+                .our-text {
+
+                    h3 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+        //end of our solution
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 801px) and (max-width: 1024px) {
+    .container {
+
+        // what we do section
+        .why-huiospay {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .why-left {
+                width: 100%;
+
+                .why-title {
+                    width: 90%;
+
+                    h2 {
+                        color: var(--primary-blue);
+                        font-size: 42px;
+                    }
+                }
+
+                .why-text {
+                    padding-right: 10px;
+
+                    h3 {
+                        font-size: 23px;
+                        font-weight: 100;
+                        color: var(--font-color);
+                    }
+                }
+
+                .why-bulletin {
+                    display: flex;
+                    flex-direction: column;
+
+                    .list {
+                        display: flex;
+                        flex-direction: column;
+
+                        .list1 {
+                            display: flex;
+                            flex-direction: row;
+                            margin-right: 5%;
+                            min-width: 300px;
+
+                            .icon {
+                                display: flex;
+                                align-self: center;
+                                max-width: 30px;
+                            }
+
+                            .text {
+                                margin-left: 10px;
+
+                                p {
+                                    color: var(--font-color);
+                                    padding-left: 15px;
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .why-right {
+                display: none;
+                // width: calc(100% - 50%);
+
+            }
+        }
+
+        //end of what we do section
+
+        // our solution
+        .our-solution {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .our-left {
+                display: none;
+
+            }
+
+            .our-right {
+                width: 100%;
+                padding: 0;
+
+                .our-title {
+                    width: 100%;
+
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+
+                .our-text {
+
+                    h3 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+        //end of our solution
+    }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1279px) {}
+
+/* Media Query for Large screens */
+@media (min-width: 1280px) {
+    .container {
+    
+        // what we do section
+        .why-huiospay {
+            padding-left: 40px;
+            padding-right: 40px;
+    
+            .why-left {
+                width: 50%;
+    
+                .why-title {
+                    width: 80%;
+    
+                    h2 {
+                        font-size: 45px;
+                    }
+                }
+    
+                .why-text {
+                    padding-right: 10px;
+    
+                    h3 {
+                        font-size: 25px;
+                        font-weight: 100;
+                    }
+                }
+    
+                .why-bulletin {
+    
+                    .list {
+    
+                        .list1 {
+    
+                            .icon {
+                            }
+    
+                            .text {
+                                margin-left: 10px;
+    
+                                p {
+                                    padding-left: 15px;
+                                    font-size: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+    
+            .why-right {
+                width: calc(100% - 50%);
+                img{
+                    margin-top: 5rem;
+                    width: 95%;
+                }
+    
+            }
+        }
+    
+        //end of what we do section
+    
+        // our solution
+        .our-solution {
+            padding-left: 40px;
+            padding-right: 40px;
+    
+            .our-left {
+                padding: 40px;
+                width: 50%;
+                img{
+                    width: 95%;
+                }
+    
+            }
+        }
+        //end of our solution
+    }
+}
+
+/* Media Query for macbook Pro  15 */
+@media (min-width: 1440px) {}
+
+/* Media Query for office hp  15 */
+@media (min-width: 1600px) {}
