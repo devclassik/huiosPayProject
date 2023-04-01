@@ -178,6 +178,10 @@
         overflow: hidden;
         cursor: pointer;
         font-size: 20px;
+        a{
+          color: white;
+          text-decoration: none;
+        }
 
         .mobile-dropdown-content {
           position: absolute;
@@ -332,7 +336,6 @@
 
       .menu-action {
         display: none;
-        flex-direction: row;
       }
     }
   }
@@ -350,7 +353,6 @@
 
       .menu-action {
         display: none;
-        flex-direction: row;
       }
 
       .hamburger {

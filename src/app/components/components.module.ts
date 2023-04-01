@@ -7,7 +7,8 @@ import { FooterComponent } from './footer/footer.component';
 import { BackToTopComponent } from './back-to-top/back-to-top.component';
 import { CommunitySectionComponent } from './community-section/community-section.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OverlaySectionComponent } from './overlay-section-why-huiospay/overlay-section.component';
+import { OverlaySectionComponent } from './why-huiospay-overlay-section/overlay-section.component';
+import { DevelopersOverlaySectionComponent } from './developers-overlay-section/developers-overlay-section.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { OverlaySectionComponent } from './overlay-section-why-huiospay/overlay-
     FooterComponent,
     BackToTopComponent,
     CommunitySectionComponent,
-    OverlaySectionComponent
+    OverlaySectionComponent,
+    DevelopersOverlaySectionComponent
   ],
   imports: [
     CommonModule,
@@ -31,6 +33,7 @@ import { OverlaySectionComponent } from './overlay-section-why-huiospay/overlay-
     FooterComponent,
     CommunitySectionComponent,
     OverlaySectionComponent,
+    DevelopersOverlaySectionComponent,
     BackToTopComponent,
     
   ]

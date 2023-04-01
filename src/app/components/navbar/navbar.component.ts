@@ -61,6 +61,18 @@ isSubmenu: boolean = false;
 
       }
 
+      // Case 4  
+      case 4: {
+
+        this.result = 'Case 4';
+        // console.log('result', this.result);
+
+
+        break;
+
+      }
+
+
       // Default Case  
       default: {
 

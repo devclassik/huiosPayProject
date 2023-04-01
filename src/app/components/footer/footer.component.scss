@@ -118,13 +118,14 @@
 
             .huiospay {
                 h3 {
-                    font-size: 23px;
+                    font-size: var(--mobile-text);
                 }
 
                 .list {
                     li {
                         font-size: 25px;
                         padding-bottom: 6px;
+                        font-size: var(--mobile-text);
 
                         a {
                             text-decoration: none;
@@ -137,7 +138,7 @@
                     flex-direction: row;
 
                     li {
-                        font-size: 22px;
+                        font-size: var(--mobile-text);
                         padding: 4px 2px;
 
                         app-font-icon {}
@@ -146,13 +147,19 @@
             }
         }
 
-        .footbase {}
+        .footbase {
+            p {
+                font-size: var(--mobile-text);
+            }
+        }
     }
+
     //end of footer section
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 800px){
+@media (min-width: 481px) and (max-width: 800px) {
+
     //footer section
     .footer {
         display: flex;
@@ -181,12 +188,14 @@
 
             .huiospay {
                 h3 {
-                    font-size: 23px;
+                    font-size: var(--tablet-text);
+
                 }
 
                 .list {
                     li {
-                        font-size: 22px;
+                        font-size: var(--tablet-text);
+
                         padding-bottom: 6px;
 
                         a {
@@ -200,9 +209,9 @@
                     flex-direction: row;
 
                     li {
-                        font-size: 20px;
+                        font-size: var(--tablet-text);
                         padding: 4px 8px;
-                        
+
 
                         app-font-icon {}
                     }
@@ -210,8 +219,13 @@
             }
         }
 
-        .footbase {}
+        .footbase {
+            p{
+                font-size: var(--tablet-text);
+            }
+        }
     }
+
     //end of footer section
 }
 
@@ -221,23 +235,27 @@
         background: linear-gradient(0.12turn, var(--background-blue), var(--primary-blue));
         margin-top: 0%;
     }
-     
+
 }
 
 /* Media Query for macbook Pro  15 */
 @media (min-width: 1440px) {
-//footer section
-.footer {
-    margin-top: 4.7%;
-}
-//end of footer section
+
+    //footer section
+    .footer {
+        margin-top: 4.7%;
+    }
+
+    //end of footer section
 }
 
 /* Media Query for office hp  15 */
 @media (min-width: 1600px) {
+
     //footer section
-.footer {
-    margin-top: 3.7%;
-}
-//end of footer section
+    .footer {
+        margin-top: 3.7%;
+    }
+
+    //end of footer section
 }
