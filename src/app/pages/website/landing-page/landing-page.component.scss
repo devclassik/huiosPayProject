@@ -657,7 +657,7 @@
         margin: auto;
 
         .btn-seamless {
-          font-size: 20px;
+          font-size: var(--mobile-headings);
           padding: 8px 20px;
           text-transform: uppercase;
         }
@@ -668,7 +668,8 @@
         max-width: 90%;
 
         h2 {
-          font-size: 25px;
+          font-size: var(--mobile-headings);
+
         }
       }
 
@@ -688,7 +689,9 @@
             padding-top: 20px;
             padding-left: 10px;
 
-            img {}
+            img {
+              height: 90px;
+            }
           }
 
           .text {
@@ -701,14 +704,15 @@
 
               h3 {
                 margin: 0;
-                font-size: 26px;
+                font-size: var(--mobile-headings);
               }
             }
 
             .text-msg {
               h4 {
                 margin: 0;
-                font-size: 23px;
+                font-size: var(--mobile-text);
+
               }
             }
           }
@@ -738,7 +742,7 @@
         .wwd-button {
           .btn-wwd {
             padding: 8px 30px;
-            font-size: 20px;
+            font-size: var(--mobile-headings);
             text-transform: uppercase;
           }
         }
@@ -747,7 +751,7 @@
           width: 100%;
 
           h2 {
-            font-size: 25px;
+            font-size: var(--mobile-headings);
           }
         }
 
@@ -756,7 +760,9 @@
 
           h3 {
             text-align: start;
-            font-size: 23px;
+            line-height: 1.5;
+            font-size: var(--mobile-text);
+
           }
         }
 
@@ -778,6 +784,10 @@
                 display: flex;
                 align-self: center;
                 max-width: 25px;
+
+                img {
+                  width: 90%;
+                }
               }
 
               .text {
@@ -786,7 +796,8 @@
                 p {
                   color: var(--font-color);
                   padding-left: 15px;
-                  font-size: 21px;
+                  font-size: var(--mobile-text);
+
                 }
               }
             }
@@ -813,7 +824,7 @@
         .wu-btn {
           .btn-wwd {
             padding: 8px 30px;
-            font-size: 20px;
+            font-size: var(--mobile-headings);
             text-transform: uppercase;
           }
         }
@@ -822,7 +833,7 @@
           width: 100%;
 
           h3 {
-            font-size: 25px;
+            font-size: var(--mobile-headings);
           }
         }
 
@@ -845,32 +856,32 @@
 
             .title {
               h3 {
-                font-size: 22px;
+                font-size: var(--mobile-headings);
               }
             }
 
             .text {
               h4 {
-                font-size: 20px;
+                font-size: var(--mobile-text);
               }
             }
           }
 
           &:hover {
-            transform: translate(75px, 0px);
-            -webkit-transform: translate(75px, 0px);
-            -moz-transform: translate(75px, 0px);
-            -ms-transform: translate(75px, 0px);
-            -o-transform: translate(75px, 0px);
+            transform: translate(50px, 0px);
+            -webkit-transform: translate(50px, 0px);
+            -moz-transform: translate(50px, 0px);
+            -ms-transform: translate(50px, 0px);
+            -o-transform: translate(50px, 0px);
             border: none;
           }
 
           &:active {
-            transform: translate(100px, 0px);
-            -webkit-transform: translate(100px, 0px);
-            -moz-transform: translate(100px, 0px);
-            -ms-transform: translate(100px, 0px);
-            -o-transform: translate(100px, 0px);
+            transform: translate(50px, 0px);
+            -webkit-transform: translate(50px, 0px);
+            -moz-transform: translate(50px, 0px);
+            -ms-transform: translate(50px, 0px);
+            -o-transform: translate(50px, 0px);
             border: none;
           }
         }
@@ -909,7 +920,7 @@
           .btn-hst-two {
             display: block;
             padding: 8px 30px;
-            font-size: 20px;
+            font-size: var(--mobile-headings);
             text-transform: uppercase;
           }
         }
@@ -918,13 +929,13 @@
           width: 100%;
 
           h2 {
-            font-size: 26px;
+            font-size: var(--mobile-headings);
           }
         }
 
         .hst-text {
           h3 {
-            font-size: 22px;
+            font-size: var(--mobile-text);
             line-height: 1.5;
             font-weight: 100;
           }
@@ -947,15 +958,18 @@
                 display: flex;
                 align-self: center;
                 max-width: 30px;
+                img{
+                  width: 90%;
+                }
               }
 
               .text {
-                margin-left: 10px;
+                margin-left: 0px;
 
                 p {
                   color: var(--font-color);
                   padding-left: 15px;
-                  font-size: 22px;
+                  font-size: var(--mobile-text);
                 }
               }
             }
@@ -967,7 +981,7 @@
           flex-direction: row;
 
           h4 {
-            font-size: 20px;
+            font-size: var(--mobile-headings);
             font-weight: 600;
             padding-right: 0;
 
@@ -993,9 +1007,7 @@
 
       }
     }
-
     //end of huiospay train section
-
   }
 }
 
@@ -1944,7 +1956,8 @@
       .hst-left {
         padding: 40px;
         width: 50%;
-        img{
+
+        img {
           width: 90%;
         }
 
@@ -2005,6 +2018,7 @@
 /* Media Query for office hp  15 */
 @media (min-width: 1600px) {
   .container {
+
     //map section
     .overlay {
 
